@@ -1,0 +1,5 @@
+---
+# vars file for dxc_os_build_agent
+nodejs_npm_global_packages:
+  - name: pakka
+  - name: node-inspector
