@@ -32,3 +32,4 @@ dependencies:
   - src: https://github.com/geerlingguy/ansible-role-ansible
   - src: https://github.com/geerlingguy/ansible-role-nodejs
   - src: https://github.com/dayglo/ansible-teamcity-agent
+  - src: infOpen.openjdk-jre
