@@ -1,2 +1,25 @@
 ---
 # tasks file for dxc_os_build_agent
+- name: Download ovftool
+  get_url:
+    url: "{{ovftool_download_site}}/{{ovftool_bundle_file}}"
+    dest: /tmp
+    checksum: "{{ovftool_sha256_checksum}}"
+    mode: u+rwx
+
+- name: run ovftool installer
+  command: "/tmp/{{ovftool_bundle_file}} --console --required --eulas-agreed"
+
+
+
+
+- name: Download workstation
+  get_url:
+    url: "{{vmware_download_site}}/{{vmware_bundle_file}}"
+    dest: /tmp
+    checksum: "{{vmware_sha256_checksum}}"
+    mode: u+rwx
+
+- name: run workstation installer
+  command: "/tmp/{{vmware_bundle_file}} --console --required --eulas-agreed"
+

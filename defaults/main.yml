@@ -1,2 +1,25 @@
 ---
 # defaults file for dxc_os_build_agent
+
+ovftool_download_site: https://s3-eu-west-1.amazonaws.com/hp-docker/tools
+ovftool_bundle_file: VMware-ovftool-4.2.0-5965791-lin.x86_64.bundle
+ovftool_sha256_checksum: sha256:5040dd9fc763fb4ea5324bce758e697064f636e3c0fb838c8f69c711400bdf7e
+
+
+# The directory into which to install the downloaded ovftool binaries.
+ovf_dir: "/usr"
+
+
+
+vmware_download_site: https://s3-eu-west-1.amazonaws.com/hp-docker/tools
+vmware_bundle_file: VMware-Workstation-Full-14.0.0-6661328.x86_64.bundle
+vmware_sha256_checksum: sha256:f758e06d302b339c23f9c498d6dbf8a0182cfdfb71e4cdcc209ecfb68e20500a
+
+nodejs_install_npm_user: vagrant
+
+
+teamcity_agent_server_url: 192.168.172.1
+teamcity_agent_server_port: 8111
+teamcity_agent_install_dir: /opt/buildAgent
+teamcity_server_user_name: admin
+teamcity_server_user_passwd: admin

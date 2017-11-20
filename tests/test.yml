@@ -1,5 +1,5 @@
 ---
-- hosts: localhost
+- hosts: buildagent
   remote_user: root
   roles:
-    - dxc_os_build_agent
+    - ansible-role-dxc-build-agent
