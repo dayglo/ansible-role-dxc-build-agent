@@ -23,3 +23,10 @@ teamcity_agent_server_port: 8111
 teamcity_agent_install_dir: /opt/buildAgent
 teamcity_server_user_name: admin
 teamcity_server_user_passwd: admin
+
+packer_url: https://releases.hashicorp.com/packer/1.1.2
+packer_filename: packer_1.1.2_linux_amd64.zip
+packer_checksum: sha256:7e315a6110333d9d4269ac2ec5c68e663d82a4575d3e853996a976875612724b
+
+packer_vsphere_plugin_url: https://github.com/jetbrains-infra/packer-builder-vsphere/releases/download/v1.4/packer-builder-vsphere.linux
+packer_vsphere_plugin_checksum: sha256:9760b8f3c682f1fa42146b300f250b5df4b5cf7f6b5bea2e022415af9640a9d6

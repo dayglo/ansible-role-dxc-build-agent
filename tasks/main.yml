@@ -12,7 +12,6 @@
 
 
 
-
 - name: Download workstation
   get_url:
     url: "{{vmware_download_site}}/{{vmware_bundle_file}}"
@@ -22,4 +21,33 @@
 
 - name: run workstation installer
   command: "/tmp/{{vmware_bundle_file}} --console --required --eulas-agreed"
+
+
+
+- name: Download packer
+  get_url:
+    url: "{{packer_url}}/{{packer_filename}}"
+    dest: /tmp
+    checksum: "{{packer_checksum}}"
+
+- name: Unzip packer
+  unarchive:
+    src: "/tmp/{{packer_filename}}"
+    dest: /usr/local/bin
+    remote_src: yes
+
+- name: Set packer to be executable
+  file:
+    path: /usr/local/bin/packer
+    mode: u+rwx
+
+
+
+- name: Download packer vsphere plugin
+  get_url:
+    url: "{{packer_vsphere_plugin_url}}"
+    dest: /usr/local/bin
+    checksum: "{{packer_vsphere_plugin_checksum}}"
+    mode: u+rwx
+
 
