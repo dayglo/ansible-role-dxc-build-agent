@@ -5,7 +5,7 @@
     url: "{{ovftool_download_site}}/{{ovftool_bundle_file}}"
     dest: /tmp
     checksum: "{{ovftool_sha256_checksum}}"
-    mode: u+rwx
+    mode: 0755
 
 - name: run ovftool installer
   command: "/tmp/{{ovftool_bundle_file}} --console --required --eulas-agreed"
@@ -17,7 +17,7 @@
     url: "{{vmware_download_site}}/{{vmware_bundle_file}}"
     dest: /tmp
     checksum: "{{vmware_sha256_checksum}}"
-    mode: u+rwx
+    mode: 0755
 
 - name: run workstation installer
   command: "/tmp/{{vmware_bundle_file}} --console --required --eulas-agreed"
@@ -39,7 +39,7 @@
 - name: Set packer to be executable
   file:
     path: /usr/local/bin/packer
-    mode: u+rwx
+    mode: 0755
 
 
 
